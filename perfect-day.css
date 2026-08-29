@@ -103,3 +103,26 @@ p {
     bottom: 10px;
     right: 10px;
 }
+
+.fast-moving-image {
+  position: absolute;
+  top: 70%; 
+  left: 0%;
+  width: 200px; 
+  transition: transform 1.5s ease-in-out;
+}
+.slow-moving-image {
+  position: absolute;
+  top: 70%; 
+  left: 0%;
+  width: 200px; 
+  transition: transform 3s ease-in-out;
+}
+
+.walking-image {
+  position: absolute;
+  top: 70%; 
+  right: 0%;
+  width: 200px; 
+  transition: transform 5s ease-in-out;
+}
