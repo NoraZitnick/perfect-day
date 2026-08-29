@@ -94,10 +94,10 @@ const rootNode = new TreeNode("0", "Welcome to the Perfect Day!", "The organizer
 
 
 //2
-rootNode.c.push(new TreeNode("00", "Food Catering", "You chose option 0. This is the next step in your journey."));
+rootNode.c.push(new TreeNode("00", "Food Catering", "Time to find some food! Do you want to take a Waymo to go farther, or walk around and find some local spots?"));
 //3
 rootNode.c[0].c.push(new TreeNode("000", "Take a Waymo", "Waymo gets hacked and you die."));
-rootNode.c[0].c.push(new TreeNode("001", "Walk Around", "You chose option 0.1. This is the next step in your journey."));
+rootNode.c[0].c.push(new TreeNode("001", "Walk Around", "What are we feeling?"));
 //4
 rootNode.c[0].c[1].c.push(new TreeNode("0010", "Tacos", "Do you have money?"));
 rootNode.c[0].c[1].c.push(new TreeNode("0011", "Pizza", "It is illegal to buy pizza today because it is eating-pizza-is-illegal-day. Buy from a shady dealer."));
@@ -106,16 +106,16 @@ rootNode.c[0].c[1].c.push(new TreeNode("0012", "Sushi", "It is too expensive! Ch
 //"gives sushi the c burrito and pizza"
 rootNode.c[0].c[1].c[2].c.push(rootNode.c[0].c[1].c[0]);
 rootNode.c[0].c[1].c[2].c.push(rootNode.c[0].c[1].c[1])
-rootNode.c[0].c[1].c[0].c.push(new TreeNode("00100", "Expensive Restaurant", "Everyone gets food poisoning and you get sued END."));
+rootNode.c[0].c[1].c[0].c.push(new TreeNode("00100", "Expensive Restaurant", "Everyone gets food poisoning and you get sued."));
 rootNode.c[0].c[1].c[0].c.push(new TreeNode("00101", "Food Truck", "Do you want Sonia's food truck or Sophia's food truck?"));
-rootNode.c[0].c[1].c[1].c.push(new TreeNode("00110", "Buy Pepperoni", "This pepperoni looks slightly green. Maybe it's just the lighting?"));
-rootNode.c[0].c[1].c[1].c.push(new TreeNode("00111", "Buy Pineapple", "You buy pineapple. The Pineapple Loving Pigeon is summoned."));
+rootNode.c[0].c[1].c[1].c.push(new TreeNode("00110", "Pepperoni Pizza", "This pepperoni looks slightly green. Maybe it's just the lighting?"));
+rootNode.c[0].c[1].c[1].c.push(new TreeNode("00111", "Pineapple Pizza", "You buy pineapple. The Pineapple Loving Pigeon is summoned."));
 
 //6
 rootNode.c[0].c[1].c[0].c[1].c.push(new TreeNode("001010", "Buy from Sophia's", "Sophia makes great chicken and fish tacos. Which one will you buy?"));
 rootNode.c[0].c[1].c[0].c[1].c.push(new TreeNode("001011", "Buy from Sonia's", "Sonia's stares you down as she zooms away. No tacos for you! It's getting closer to the start time, and there aren't many options left..."));
-rootNode.c[0].c[1].c[1].c[0].c.push(new TreeNode("001100", "It's okay, it doesn't matter", "Everyoen gets food poisoning and you get sued END."));
-rootNode.c[0].c[1].c[1].c[0].c.push(new TreeNode("001101", "Swap the green pepperoni for pineapple", "The Pineapple Loving Pigeon is summoned."));
+rootNode.c[0].c[1].c[1].c[0].c.push(new TreeNode("001100", "It's okay, it doesn't matter", "Everyoen gets food poisoning and you get sued."));
+rootNode.c[0].c[1].c[1].c[0].c.push(new TreeNode("001101", "Swap the green pepperoni for pineapple", "Guess this is pineapple pizza now..."));
 rootNode.c[0].c[1].c[1].c[1].c.push(new TreeNode("001110", "Woah...", "It's eyeing your pizza! What do you do?"));
 
 
@@ -136,13 +136,13 @@ rootNode.c[0].c[1].c[1].c[1].c[0].c[3].c.push(new TreeNode("00111030", "Kick", "
 rootNode.c[0].c[1].c[1].c[1].c[0].c[3].c.push(new TreeNode("00111031", "Punch", "It works! The Pineapple Loving Pigeon is defeated! You all have pineapple pizza and slightly pineapple flavored pigeon for dinner."));
 
 //9
-rootNode.c[0].c[1].c[0].c[1].c[1].c[0].c.push(new TreeNode("001011000", "Seagull", "Bad choice! Everyone gets food poisoning and you are sued for 5 million dollars."));
-rootNode.c[0].c[1].c[0].c[1].c[1].c[0].c.push(new TreeNode("001011001", "Pigeon", "You process and cook the pigeon to make a delectable meal. Everyone loves it! Sunbeam goes successfully and coders are full and happy."));
+rootNode.c[0].c[1].c[0].c[1].c[1].c[0].c[0].c.push(new TreeNode("001011000", "Seagull", "Bad choice! Everyone gets food poisoning and you are sued for 5 million dollars."));
+rootNode.c[0].c[1].c[0].c[1].c[1].c[0].c[0].c.push(new TreeNode("001011001", "Pigeon", "You process and cook the pigeon to make a delectable meal. Everyone loves it! Sunbeam goes successfully and coders are full and happy."));
 rootNode.c[0].c[1].c[1].c[1].c[0].c[3].c[0].c.push(new TreeNode("001110300", "You fall", "You are on the ground, and the Pineapple Loving Pigeon swoops for your pizza, and you get eaten with it. Good luck next time..."));
 
 rootNode.c[0].c[1].c[1].c[1].c[0].c[1].c.push(rootNode.c[0].c[1].c[0].c[1].c[1].c[0]);
 rootNode.c[0].c[1].c[0].c[1].c[0].c[0].c.push(rootNode.c[0].c[1].c[0].c[1].c[1].c[0]);
-rootNode.c[0].c[1].c[1].c[0].c[1].c.push(rootNode.c[0].c[1].c[1].c[1].c[1]);
+rootNode.c[0].c[1].c[1].c[0].c[1].c.push(rootNode.c[0].c[1].c[1].c[1]);
 // 01110300 to 0011101 to 0010110
 // 0010100 to 0010110
 // 001101 to 00111
