@@ -36,7 +36,7 @@ function handleButtonPress(event) {
 }
 
 class TreeNode {
-    constructor(header, text, id = null) {
+    constructor(id = null, header, text) {
         this.header = header;
         this.text = text;
         this.children = [];
@@ -44,14 +44,21 @@ class TreeNode {
     }
 }
 
-const rootNode = new TreeNode("Welcome to the Perfect Day!", "This is the starting point of your journey. Choose an option below to begin.", 0);
-rootNode.children.push(new TreeNode("Option 0", "You chose option 0. This is the next step in your journey.", 0.0));
-rootNode.children.push(new TreeNode("Option 1", "You chose option 1. This is the next step in your journey.", 0.1));
-rootNode.children[0].children.push(new TreeNode("Option 0.0", "You chose option 0.0. This is the next step in your journey.", 0.00));
-rootNode.children[0].children.push(new TreeNode("Option 0.1", "You chose option 0.1. This is the next step in your journey.", 0.01));
-rootNode.children[1].children.push(new TreeNode("Option 1.0", "You chose option 1.0. This is the next step in your journey.", 0.10));
-rootNode.children[1].children.push(new TreeNode("Option 1.1", "You chose option 1.1. This is the next step in your journey.", 0.11));
-
+const rootNode = new TreeNode("0", "Welcome to the Perfect Day!", "This is the starting point of your journey. Choose an option below to begin.");
+rootNode.children.push(new TreeNode("00", "Option 0", "You chose option 0. This is the next step in your journey."));
+rootNode.children.push(new TreeNode("01", "Option 1", "You chose option 1. This is the next step in your journey."));
+rootNode.children[0].children.push(new TreeNode("000", "You chose option 0.0. This is the next step in your journey."));
+rootNode.children[0].children.push(new TreeNode("001", "You chose option 0.1. This is the next step in your journey."));
+rootNode.children[1].children.push(new TreeNode("010", "You chose option 1.0. This is the next step in your journey."));
+rootNode.children[1].children.push(new TreeNode("011", "You chose option 1.1. This is the next step in your journey."));
+rootNode.children[0].children[0].children.push(new TreeNode("0000", "You chose option 0.0.0. This is the next step in your journey."));
+rootNode.children[0].children[0].children.push(new TreeNode("0001", "You chose option 0.0.1. This is the next step in your journey."));
+rootNode.children[0].children[1].children.push(new TreeNode("0010", "You chose option 0.1.0. This is the next step in your journey."));
+rootNode.children[0].children[1].children.push(new TreeNode("0011", "You chose option 0.1.1. This is the next step in your journey."));
+rootNode.children[1].children[0].children.push(new TreeNode("0100", "You chose option 1.0.0. This is the next step in your journey."));
+rootNode.children[1].children[0].children.push(new TreeNode("0101", "You chose option 1.0.1. This is the next step in your journey."));
+rootNode.children[1].children[1].children.push(new TreeNode("0110", "You chose option 1.1.0. This is the next step in your journey."));
+rootNode.children[1].children[1].children.push(new TreeNode("0111", "You chose option 1.1.1. This is the next step in your journey."));
 let currentNode = rootNode;
 getDomElements();
 renderNode(currentNode);
