@@ -1,7 +1,7 @@
 let buttonContainer;
 let header;
 let paragraph;
-let parentNode;
+let path = [];
 
 function getDomElements() {
     buttonContainer = document.querySelector(".option-container");
@@ -31,9 +31,22 @@ function handleButtonPress(event) {
         return;
     }
 
+    path.push(currentNode);
     currentNode = currentNode.children[buttonIndex];
     renderNode(currentNode);
 }
+
+function backButtonPress() {
+    if (path.length === 0) {
+        return;
+    }
+    currentNode = path.length > 0 ? path[path.length - 1] : rootNode;
+    renderNode(currentNode);
+    path.pop();
+}
+
+const backButton = document.querySelector(".back-button");
+backButton.addEventListener("click", backButtonPress);
 
 class TreeNode {
     constructor(id = null, header, text) {
@@ -55,7 +68,7 @@ rootNode.children[0].children[0].children.push(new TreeNode("0000", "You chose o
 rootNode.children[0].children[0].children.push(new TreeNode("0001", "You chose option 0.0.1. This is the next step in your journey."));
 rootNode.children[0].children[1].children.push(new TreeNode("0010", "You chose option 0.1.0. This is the next step in your journey."));
 rootNode.children[0].children[1].children.push(new TreeNode("0011", "You chose option 0.1.1. This is the next step in your journey."));
-rootNode.children[1].children[0].children.push(new TreeNode("0100", "You chose option 1.0.0. This is the next step in your journey."));
+rootNode.children[1].children[0].children.push(new TreeNode("0100", "You chose option 1.0.0. This is the next step in your journey.")); 
 rootNode.children[1].children[0].children.push(new TreeNode("0101", "You chose option 1.0.1. This is the next step in your journey."));
 rootNode.children[1].children[1].children.push(new TreeNode("0110", "You chose option 1.1.0. This is the next step in your journey."));
 rootNode.children[1].children[1].children.push(new TreeNode("0111", "You chose option 1.1.1. This is the next step in your journey."));
