@@ -55,6 +55,23 @@ function renderNode(node) {
             document.body.removeChild(image);
         });
     }
+
+    if (node.header === "Take a Waymo") {
+        const image = document.createElement("img");
+        image.src = "waymo.png";
+        image.classList.add("waymo-image");
+        document.body.appendChild(image);
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                image.style.transform = 'scale(10, 10)';
+            });
+        });
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                image.style.transform = 'scale(10, 10)';
+            });
+        });
+    }
 }
 
 function handleButtonPress(event) {
