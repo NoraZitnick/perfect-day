@@ -23,6 +23,7 @@ function renderNode(node) {
         buttonContainer.appendChild(button);
     }
 
+    document.getElementsByClassName("falling-image")[0]?.remove();
     if (node.id === "01111" || node.id === "01110") {
 
         console.log("Node 01110 reached");
@@ -42,18 +43,42 @@ function renderNode(node) {
     }
 
     if (node.id === "010" || node.id === "0101" || node.id === "010000") {
-        const image = document.createElement("img");
-        image.src = "walking.gif";
-        image.classList.add("walking-image");
-        document.body.appendChild(image);
+        const image1 = document.createElement("img");
+        image1.src = "walking.gif";
+        image1.classList.add("walking-image");
+        document.body.appendChild(image1);
         requestAnimationFrame(() => {
             requestAnimationFrame(() => {
-                image.style.transform = 'translateX(-1000px)';
+                image1.style.transform = 'translateX(-1000px)';
             });
         });
-        image.addEventListener("transitionend", () => {
-            document.body.removeChild(image);
+        image1.addEventListener("transitionend", () => {
+            document.body.removeChild(image1);
         });
+    }
+
+    if (node.header === "Take a Waymo") {
+        const image2 = document.createElement("img");
+        image2.src = "waymo.png";
+        image2.classList.add("waymo-image");
+        document.body.appendChild(image2);
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                image2.style.transform = 'scale(10, 10)';
+            });
+        });
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                image2.style.transform = 'scale(10, 10)';
+            });
+        });
+    }
+
+    if (node.header === "You fall") {
+        const image3 = document.createElement("img");
+        image3.src = "bird2.png";
+        image3.classList.add("falling-image");
+        document.body.appendChild(image3);
     }
 }
 

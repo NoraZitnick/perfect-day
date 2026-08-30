@@ -126,3 +126,21 @@ p {
   width: 200px; 
   transition: transform 5s ease-in-out;
 }
+
+.waymo-image {
+  position: absolute;
+  top: 50%;
+  align-self: center;
+  right: 40%;
+  width: 200px;
+  transition: transform 5s ease-in-out;
+}
+
+.falling-image {
+  position: absolute;
+  top: 50%;
+  align-self: center;
+  right: 40%;
+  width: 500px;
+  transition: transform 5s ease-in-out;
+}
