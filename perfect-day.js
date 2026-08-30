@@ -74,7 +74,7 @@ function renderNode(node) {
         });
     }
 
-    if (node.header === "You fall") {
+    if (node.header === "You fall" || node.header === "Run Away") {
         const image3 = document.createElement("img");
         image3.src = "bird2.png";
         image3.classList.add("falling-image");
