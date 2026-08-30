@@ -80,6 +80,13 @@ function renderNode(node) {
         image3.classList.add("falling-image");
         document.body.appendChild(image3);
     }
+
+    if (node.header === "Seagull" || node.header === "It's okay, it doesn't matter") {
+        const image4 = document.createElement("img");
+        image4.src = "cookedfood.png";
+        image4.classList.add("falling-image");
+        document.body.appendChild(image4);
+    }
 }
 
 function handleButtonPress(event) {
